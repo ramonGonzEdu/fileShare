@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Files</title>
+	</head>
+	<body>
+		<form action="/api/uploadFile" method="post" enctype="multipart/form-data">
+			<label for="user">Username:</label>
+			<input type="text" id="user" name="user" /><br /><br />
+			<label for="sec">Security Code:</label>
+			<input type="text" id="sec" name="sec" /><br /><br />
+			<label for="userfile">File:</label>
+			<input type="file" id="userfile" name="userfile" /><br /><br />
+			<input type="submit" value="Submit" />
+		</form>
+	</body>
+</html>
