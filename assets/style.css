@@ -1,0 +1,110 @@
+body {
+	background: #262626;
+	color: #e5e5e5;
+	margin: 2em;
+}
+
+.list {
+	display: flex;
+	flex: auto;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.listItem {
+	padding: 1.5em;
+	/* height: 1em; */
+	width: 12em;
+	border: 2px solid #a72121;
+	margin-bottom: 1cm;
+	margin-right: 1cm;
+	background: #262626;
+	transition: background 0.2s;
+}
+
+.listItem:hover {
+	background: #363636;
+}
+
+.listItem * {
+	color: #e5e5e5;
+}
+
+a {
+	color: #e5e5e5;
+}
+
+form {
+}
+
+input {
+	background: #363636;
+	color: #e5e5e5;
+	border: 2px solid #a72121;
+	padding: 0.2cm;
+}
+
+.uploadButton {
+	width: 2cm;
+	height: 2cm;
+	border: 2px solid #a72121;
+	border-radius: 1cm;
+	position: fixed;
+	bottom: 1cm;
+	right: 1cm;
+	background: #262626;
+	transition: background 0.2s;
+}
+
+.uploadButton:hover {
+	background: #363636;
+}
+
+.uploadButton::before {
+	display: inline-block;
+	min-height: 0.2cm;
+	min-width: 1cm;
+	background: #a72121;
+	content: '';
+	position: absolute;
+	top: 0.9cm;
+	left: 0.5cm;
+}
+
+.uploadButton::after {
+	display: inline-block;
+	min-height: 1cm;
+	min-width: 0.2cm;
+	background: #a72121;
+	content: '';
+	position: absolute;
+	top: 0.5cm;
+	left: 0.9cm;
+}
+
+.uploadModal[hidden] {
+	opacity: 0;
+	pointer-events: none;
+	/* height: 0; */
+}
+
+.uploadModal {
+	pointer-events: all;
+	display: block;
+	opacity: 1;
+	transition: opacity 0.2s;
+	position: fixed;
+	top: 10vh;
+	height: 80vh;
+	left: 10vw;
+	width: 80vw;
+	border: 2px solid #a72121;
+	background: #262626;
+	z-index: 20;
+}
+
+.uploadModal iframe {
+	border: none;
+	width: 100%;
+	height: 100%;
+}

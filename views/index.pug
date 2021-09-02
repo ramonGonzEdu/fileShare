@@ -1,0 +1,17 @@
+doctype html
+include listItem.pug
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="/assets/style.css")
+    title Files
+  body 
+    h1 File Vault
+    .list
+      each val in users
+        +listItem("/files/"+val)= val
+    .uploadButton(onclick="document.querySelector('.uploadModal').hidden=!document.querySelector('.uploadModal').hidden;")
+    .uploadModal(hidden="true")
+      iframe(src="/upload")
